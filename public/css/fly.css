@@ -1,0 +1,112 @@
+.Banner{       
+        background: url("../imgs/Background/ReserveFlyBackground.png"); 
+        height: 400px;
+        width: 100%;
+        background-size: cover;
+        overflow: hidden;
+        margin: 75px auto;
+}
+
+.tagline-banner{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 135px;
+}
+
+/*-------- Style Search Bar --------*/
+
+                .container-search{
+                    /* background: url(../imgs/Background/BackgroundBlockInput.png);*/
+                    background-color: var(--Secondary-Color);
+                    width: 50%;
+                    height: 500px;
+                    margin: 75px auto;
+                }
+                
+                .search-container-input{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 400px;
+                    margin: 40px 0px;
+                    justify-content: space-around;
+                    
+                }
+                
+                .input-line-top{
+                    display: flex;
+                    
+                }
+                
+                .input-line-bottom{
+                    display: flex;
+                    
+                }
+                
+                .block-search{
+                    margin: 20px;
+                }
+
+                .container-block-fly-info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                .block-fly-info{
+                    align-items: center;
+                    background-color: var(--Secondary-Color);
+                    border: 1px solid black;
+                    display: flex;
+                    height: 150px;
+                    justify-content: center;
+                    width: 180px;
+                }
+
+                .text-fly-info{
+                    font-size: 15px;
+                }
+
+                .fly-info-title{
+                    font-weight: bold;
+                }
+                
+/*-------- Style Search Bar --------*/
+
+@media only screen and (max-width: 600px){
+    
+    .Banner{
+       height: 100px;
+       width: 100%;
+    }
+
+    .tagline-banner{
+        top: -25%;
+    }
+
+    .tagline{
+        font-size: 10px;
+    }
+    
+    .block-search{
+        width: 100%;
+        height: 1000px;
+    }
+    .search-container-input{
+        height: 900px;
+    }
+    .input-line-top,.input-line-bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .box{
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .block-search{
+        width: 80%;
+    }
+}

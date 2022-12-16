@@ -1,0 +1,119 @@
+:root{
+    --Main-Color: #FFA500;
+    --Secondary-Color: #003170;
+    --Third-Color: #E8810C;
+    --Text-Color: #FFFFFF;
+    --Text-Color2: #000000;
+    --Background-Color: #252525;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Mulish', sans-serif;
+    background-color: var(--Secondary-Color);
+    color: var(--Text-Color2);
+    cursor: pointer;
+    padding: 28px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    transition: 300ms ease-in-out;
+  }
+  
+  .accordion:hover{
+    font-weight: bold;
+    cursor: pointer; 
+ }
+
+ .icon-section-block:hover{
+  font-weight: bold;
+  cursor: pointer; 
+ }
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  button.active, .accordion:active {
+    background-color: var(--Main-Color);
+    color: var(--Text-Color2);
+    transition: 300ms ease-in-out;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: var(--Main-Color);
+    display: none;
+    overflow: hidden;
+    transition: 300ms ease-in-out;
+  }
+
+  icon{
+  width: 40px;
+}  
+
+  .Section{
+    background-color: var(--Secondary-Color);
+    width: 70%;
+    margin: 100px auto;
+    transition: 300ms ease-in-out;
+  }
+
+  .Section:active{
+    background-color: var(--Main-Color);
+    width: 70%;
+    margin: 50px auto;
+    transition: 300ms ease-in-out;
+  }
+
+
+  /* Section Icon Start */
+
+  .icon-section{
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Secondary-Color);
+    justify-content: space-around;
+    width: 70%;
+    margin:  100px auto ;
+    color: var(--Text-Color2);
+  }
+
+  .icon-section-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  /* Section Icon end */
+
+  @media only screen and (max-width: 600px){
+  .arrow{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .icon-section{
+      width: 100%;
+    }
+
+    .Section:active{
+      width: 70%;
+      margin: 100px auto;
+    }
+
+    .accordion{
+      font-size: 12px;
+    }
+
+    .panel p{
+      font-size: 10px;
+    }
+  }
+  

@@ -1,0 +1,27 @@
+#element-chatbox{
+    display: flex;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: var(--Main-Color);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms ease-in-out;
+}
+
+#element-chatbox:hover{
+    background-color: var(--Main-Color);
+    color: black;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+#chat-icon{
+    width: auto;
+    height: 70%;
+}
+

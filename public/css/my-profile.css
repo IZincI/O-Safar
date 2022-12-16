@@ -1,0 +1,105 @@
+/* .information{
+    margin-top: 20px;
+}
+.information ul{
+    padding: 0px;
+    margin: 0px;
+}
+.information ul li{
+    padding: 10px;
+}
+.information ul li:nth-child(odd){
+    background-color: #EEE;
+}
+.information ul li span{
+    display: inline-block;
+    width: 130px;
+} */
+
+.information-block{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+    margin: 50px auto ;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    
+    display: flex;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px 10px red;
+}
+
+#personnal-infos{
+    width: 70%;
+}
+
+.Summary li{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.active{
+    display: flex;
+    border-left: 3px solid var(--Secondary-Color);
+    color: var(--Text-Color2);
+    font-weight: bold;
+}
+
+.container-left{
+    background-color: var(--Main-Color);
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 10px;
+}
+
+
+.container-right{
+    background-color: white;
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    
+}
+
+
+
+.info li{
+    border: 1px solid var(--Main-Color);
+    height: 75px;
+    width: 90%;
+    margin: 10px 0px;
+    background-color: white;
+    display: flex;
+    
+    align-items: center;
+}
+
+.text-info-title{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.text-info{
+    font-size: 14px;
+}
+
+.hidden{
+   display: none;
+}
+
+#infoPersonnal{
+    display: block;
+}
+
+#inputPersonnal{
+    display: none;
+}

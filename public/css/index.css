@@ -1,0 +1,56 @@
+
+
+.block-background{
+    background-image: url("../imgs/Background/HomeBackground.png");
+    background-size: cover;
+    height: 700px;
+    margin: auto;
+    margin-top: 50px;
+    width : 60%;
+}
+
+.block-explore-your-desires{ 
+    align-items: center;
+    color: var(--Text-Color);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-around;
+    padding-top: 20%;
+}
+
+.block-text-explore-your-desires{
+   color: white;
+   width: 80%;
+   text-shadow: 1px 1px 2px #000000;;
+}
+
+body{
+    background-color: var(--Background-Color);
+}
+
+@media only screen and (max-width: 600px){
+
+    body{
+        width: 100%;
+        margin: auto;
+    }
+
+   
+    
+    .block-background{
+        width: 100%;
+        
+    }
+    .block-explore-your-desires{
+        width: 90%;
+        margin: auto;
+        height: 60%;
+    }
+    .text-center-justify{
+        font-size: 12px;
+    }
+    .container-pack{
+        flex-direction: column;
+    }
+}
