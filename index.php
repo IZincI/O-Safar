@@ -39,11 +39,12 @@ include('includes/chatbox.php');
 
 <!-- Global CSS -->
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="./public/css/style-general.css">
 
 <!--  Script iconify -->
 
 <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+
 
 
 
@@ -58,6 +59,7 @@ include('includes/chatbox.php');
 
     <?php
     include('includes/navbar.php');
+
     ?>
 
     <!-- end landing page -->
@@ -70,6 +72,8 @@ include('includes/chatbox.php');
 
 
     <div class="gap-header"></div>
+    <div class="gap-header"></div>
+
 
 
     <?php
@@ -77,72 +81,54 @@ include('includes/chatbox.php');
 
     ?>
 
-
-
-    <div class="block-background">
-        <div class="block-explore-your-desires">
-            <div class="block-text-explore-your-desires">
-                <p class="text-center-justify">O’safar vous propose les meilleurs tarifs sur les vols et les hôtels,</br>
-                    week-ends et séjours sur mesure.</br>
-                    Comparez les prix et réservez votre voyage pas cher dès maintenant.</p>
+    </div>
+    <div id="slider">
+        <div class="container-explore-your-desires">
+            <div class="block-explore-your-desirese">
+                <div class="block-text-explore-your-desires">
+                    <p class="text-center-justify">O’safar vous propose les meilleurs tarifs sur les vols et les hôtels,</br>
+                        week-ends et séjours sur mesure.</br>
+                        Comparez les prix et réservez votre voyage pas cher dès maintenant.</p>
+                </div>
+                <div>
+                    <h4 class="tagline">Comparer & Voyager</h4>
+                </div>
+                <div><input type="button" value="Explorer Vos Envies"></input></div>
             </div>
-            <div>
-                <h4 class="tagline">Comparer & Voyager</h4>
+            <div id="slideshow">
+
             </div>
-            <div><input type="button" value="Explorer Vos Envies"></input></div>
+
         </div>
 
-    </div>
 
     </div>
-
-    <!--  start Recherche -->
     <!--
-    <h2>Reservation Hotel</h2>
-
-    <div class="block-search" id="search">
-    <?php /*include('message.php'); */ ?>
-
-        <div class="search-container-input">
-            <div class="input-line-top">
-
-                <div class="box">
-
-                    <input type="text" placeholder="Départ">
+    <div id="slider">
+        <div class="container-explore-your-desires">
+            <div class="block-explore-your-desirese">
+                <div class="block-text-explore-your-desires">
+                    <p class="text-center-justify">O’safar vous propose les meilleurs tarifs sur les vols et les hôtels,</br>
+                        week-ends et séjours sur mesure.</br>
+                        Comparez les prix et réservez votre voyage pas cher dès maintenant.</p>
                 </div>
-                <div class="box">
-
-                    <input type="text" placeholder="Arrivée">
+                <div>
+                    <h4 class="tagline">Comparer & Voyager</h4>
                 </div>
-                <div class="box">
-
-                    <input type="date" placeholder="Check-in-Date">
-                </div>
+                <div><input type="button" value="Explorer Vos Envies"></input></div>
             </div>
-            <div class="input-line-bottom">
-                <div class="box">
-
-                    <input type="date" placeholder="Check-out-Date">
-                </div>
-                <div class="box">
-
-                    <input type="number" placeholder="Adultes">
-                </div>
-                <div class="box">
-
-                    <input type="number" placeholder="Enfants">
-                </div>
-            </div>
-            <div class="search">
-                <input type="submit" value="Chercher un vol">
+            <img src="public/imgs/01.jpg" alt="La forêt de peupliers" id="slide">
+        </div>
+        <div>
+            <div id="precedente" onclick="ChangeSlide(-1)">
+                < </div>
+                    <div id="suivante" onclick="ChangeSlide(1)">
+                        >
+                    </div>
             </div>
         </div>
-
-
     </div>
 -->
-    <!--  end Recherche -->
-
     <!--  start Meilleur offre -->
 
     <div class="offre" id="offre">
@@ -160,46 +146,49 @@ include('includes/chatbox.php');
 
 
         <div class="card-style" id="card0">
-            <a href="./hotel.php">
+            <a href="./hotel.php?namehostel=The_Weinberg_Windhoek&price=194">
                 <div class="imagecard">
-                    <img class="img-back" id="img-card0" src="./public/imgs/Cards/img1.jpg"></img>
+                    <img class="img-back" id="img-card0" src="./images/The_Weinberg_Windhoek/image4.webp"></img>
                 </div>
 
                 <div id="text" class="container-text-card">
 
                     <div class="text-card">
-                        <p class="text-card">Maroc</p>
+                        <p class="text-card">Namibie</p>
                     </div>
                     <div class="text-card">
-                        <p class="text-card">Hôtel Framzissima Marrakech</p>
+                        <p class="text-card">The Weinberg Windhoek</p>
                     </div>
                     <div class="text-card">
-                        <p class="text-card">600 €</p>
+                        <p class="text-card">194 €</p>
                     </div>
+
                 </div>
+            </a>
         </div>
-        </a>
+        c
 
         <div class="card-style" id="card1">
             <a href="./hotel.php">
                 <div class="imagecard">
-                    <img class="img-back" id="img-card1" src="./public/imgs/Background/CardsImgs/Img1.webp"></img>
+                    <img class="img-back" id="img-card1" src="./images/The_Belgium_Inn/image1.webp"></img>
                 </div>
 
                 <div id="text" class="container-text-card">
 
                     <div class="text-card">
-                        <p class="text-card">Maroc</p>
+                        <p class="text-card">Afrique du Sud</p>
                     </div>
                     <div class="text-card">
-                        <p class="text-card">ibis Marrakech Palmeraie Hotel</p>
+                        <p class="text-card">The Belgium Inn</p>
                     </div>
                     <div class="text-card">
-                        <p class="text-card">44 €</p>
+                        <p class="text-card">106 €</p>
                     </div>
                 </div>
+            </a>
         </div>
-        </a>
+
 
 
         <div class="card-style" id="card2">
@@ -221,8 +210,9 @@ include('includes/chatbox.php');
                         <p class="text-card">600 €</p>
                     </div>
                 </div>
+            </a>
         </div>
-        </a>
+
 
 
 
@@ -490,12 +480,11 @@ include('includes/chatbox.php');
 
         <?php
         include('includes/footer.php');
-
         ?>
 
         <!--  Script Card -->
-        <script src="./public/card.js"></script>
-
+        <script src="public/card.js"></script>
+        <script src="public/js/SliderHeadIndex.js"></script>
 
 
 </body>

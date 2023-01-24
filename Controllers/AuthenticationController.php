@@ -24,7 +24,7 @@ class AuthenticationController
     private function checkIsLoggedIn()
     {
         if (!isset($_SESSION['authenticated'])) {
-            redirect("Se connecter pour accéder a la page", "login.php");
+            redirect(alertMessage(), "../login.php");
             return false;
         } else {
             return true;

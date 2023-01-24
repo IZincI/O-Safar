@@ -71,22 +71,22 @@
             <ul class="links">
 
 
-                <!--
+
                 <div>
                     <li><a class="link-style" href="./test.php">test</a></li>
                 </div>
-                -->
+
                 <div>
-                    <li><a class="link-style" href="./index.php" class="active">Accueil</a></li>
+                    <li><a class="link-style" href="<?php base_url('index.php') ?>" class="active">Accueil</a></li>
                 </div>
                 <div>
-                    <li><a class="link-style" href="./#offre">Offres</a></li>
+                    <li><a class="link-style" href="<?php base_url('index.php#offre') ?>">Offres</a></li>
                 </div>
                 <div>
-                    <li><a class="link-style" href="./#package">Packages</a></li>
+                    <li><a class="link-style" href="<?php base_url('index.php#package') ?>">Packages</a></li>
                 </div>
                 <div>
-                    <li><a class="link-style" href="./contact.php">Contact</a></li>
+                    <li><a class="link-style" href="<?php base_url('contact.php') ?>">Contact</a></li>
                 </div>
             </ul>
         </div>
@@ -101,12 +101,13 @@
                     <?php
 
                     if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == true) {
-                        echo " <div class='logo'>
-                        <iconify-icon icon='bi:person-circle' width='40'></iconify-icon>
-                        </div>";
-                        echo "<h3> Bonjour, " . $_SESSION['auth_user']['user_fname'] . "</h3>";
-
                     ?>
+                        <div class='logo'>
+                            <iconify-icon icon='bi:person-circle' width='40'></iconify-icon>
+                        </div>
+
+                        <h3> Bonjour, <?= $_SESSION['auth_user']['user_fname'] ?></h3>
+
 
                 </div>
 
@@ -123,26 +124,28 @@
 
 
                         if ($_SESSION['auth_role'] != 0) {
-                            echo '
-                            <a class="selection-nav" href="./admin/Backindex.php">
+                    ?>
+                        <a class="selection-nav" href="<?php base_url('admin/Backindex.php') ?>">
                             <button class="button-square">Espace Admin</button>
-                        </a>';
+                        </a>
+                    <?php
                         }
                     ?>
 
-                    <a class="selection-nav" href="my-profile.php">
+                    <a class="selection-nav" href="<?php base_url('my-profile.php') ?>">
                         <button class="button-square">Mon Profil</button>
                     </a>
                 <?php
                     } else {
-                        echo " <a href='./login.php'>
-                
-                                    <div class='logo'>
-                                        <iconify-icon icon='bi:person-circle'width='40'></iconify-icon>
-                                    </div>
-                
-                                </a>";
-                    }
+                ?>
+                    <a href='./login.php'>
+
+                        <div class='logo'>
+                            <iconify-icon icon='bi:person-circle' width='40'></iconify-icon>
+                        </div>
+
+                    </a>
+                <?php }
 
                 ?>
 
@@ -197,7 +200,7 @@
 
     <script src="./public/js/Hamburger.js"></script>
     <script src="./public/js/nav.js"></script>
-    <script src="../public/js/master.js" defer></script>
+    <script src="<?php base_url('public/js/master.js') ?>"></script>
 
 </body>
 

@@ -10,7 +10,7 @@ class VolController
 
     public function index()
     {
-        $volQuery = "SELECT * FROM  vol";
+        $volQuery = "SELECT * FROM  vol ORDER BY `aller`,`depart` ASC";
         $result = $this->conn->query($volQuery);
         if ($result->num_rows > 0) {
             return $result;
@@ -32,17 +32,6 @@ class VolController
             return false;
         }
     }
-
-
-    /*
-    changer la date en format UE
-
-
-
-    $volQuery = "SELECT * FROM  vol WHERE id_client='$vol_id' LIMIT 1;
-        SELECT DATE_FORMAT(aller, '%m-%d-%Y %H:%i')
-        FROM vol  WHERE id_vol='30';";
-    */
 
 
     public function edit($id)

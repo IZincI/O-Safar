@@ -1,0 +1,529 @@
+.Banner{       
+    background: url("../imgs/Background/ReserveFlyBackground.png"); 
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    margin: 75px auto;
+}
+
+.tagline-banner{
+display: flex;
+justify-content: center;
+position: relative;
+top: 135px;
+}
+
+/*-------- Style Search Bar --------*/
+
+            .container-search{
+                /* background: url(../imgs/Background/BackgroundBlockInput.png);*/
+                background-color: var(--Secondary-Color);
+                width: 50%;
+                height: 500px;
+                margin: 75px auto;
+            }
+            
+            .search-container-input{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 400px;
+                margin: 40px 0px;
+                justify-content: space-around;
+                
+            }
+            
+            .input-line-top{
+                display: flex;
+                
+            }
+            
+            .input-line-bottom{
+                display: flex;
+                
+            }
+            
+            .block-search{
+                margin: 20px;
+            }
+
+            .container-block-fly-info{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-transform: capitalize;
+            }
+
+            .title-fly-info{
+                color: var(--Third-Color);
+                text-transform: capitalize;
+            }
+
+            .block-fly-info{
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid var(--Main-Color);
+                
+                margin: 0.1px;
+                display: flex;
+                height: 100px;
+                justify-content: center;
+                width: 180px;
+            }
+
+            .SubmitButton{
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+            }
+
+            .text-fly-info{
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .fly-info-title{
+                font-weight: bold;
+                
+            }
+
+            .container-price-choice{
+                display: flex;
+                justify-content: space-around;
+                background-color: white;
+                width: 85%;
+                margin: auto;
+            }
+
+            .block-info-option{
+                display: flex;
+                flex-direction: column;
+              
+            }
+
+            .card-option{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .block-price-title{
+                font-size: 25px;
+                
+            }
+
+            .block-price p{
+                font-size: 15px;
+                margin: 0px 10px;
+            }
+
+            .block-price{
+                display: flex;
+                margin: 20px;
+            }
+            .block-price-condition{
+                width: 50%;
+                font-size: 15px;
+            }
+
+            .button-option{
+                justify-content: flex-end;
+            }
+
+            .bg-grey{
+                background-color: var(--Quarter-Color);
+            }
+            
+            .input-check{
+                display: visible;
+            }
+
+            .BlockPassenger{
+                background-color: var(--Quarter-Color);
+                color: black;
+                margin: 50px auto;
+                padding: 0px 50px 50px;
+                width: 50%;
+            }
+
+            .background-choice{
+                background-color: aquamarine;
+                transition: 300ms ease-in-out;
+            }
+
+            .hidden{
+                display: none;
+            }
+
+
+
+            /* ----- Selection bagages start ----- */
+
+
+
+            .container-bagages{
+                background-color: white;
+                width: 80%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .top-info-bagage{
+                display: flex;
+                padding-bottom: 10px;
+            }
+
+            .left-side-container-bagages{
+                display: flex;
+                flex-direction: column;
+                
+                flex: 1;
+            }
+
+            .right-side-container-bagages{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                bottom: 25px;
+                position: relative;
+            }
+
+            .block-bagage{
+                display: flex;
+                align-items: center;
+                margin-left: 10px;
+                gap: 1%;
+            }
+
+            .block-infos-right-bagage{
+                margin-top: 35px;
+               
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .valise-info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            .little-information{
+                font-size: 12px;
+                font-weight: 300;
+                font-style: italic;  
+            }
+
+            .margin-none{
+                margin: 0px;
+            }
+
+            #background-image-bagage{
+                background-image: url(../public/imgs/reservationFly/bg-nombre-bagage.jpg);
+                background-position: top left;
+                background-size: 1080px;
+                display: flex;
+                width: 100%;
+                height: 373px;
+                border-radius: 0% 0% 0% 75%;
+            }
+
+            #background-image-bagage2{
+                background-image: url(../public/imgs/reservationFly/bg-nombre-bagage2.jpg);
+                background-position: top right;
+                background-size: 1080px;
+                display: flex;
+                width: 100%;
+                height: 373px;
+                border-radius: 0% 0% 0% 75%;
+            }
+
+            .info-vol{
+                color: var(--Third-Color);  
+                display: flex;
+                padding-left: 25px;
+                justify-content: flex-start;
+            }
+
+            .container-choix-nombre-bagage{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex: 1;
+            }
+
+            .choix-nombre-bagage {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                height: 10vh;
+                border: solid #e0e1e3 0.0625rem  ;
+            }
+
+            .input-choice-nombre-bagage ,.info-bagage{
+                font-weight: bold;
+               font-size: 17px;
+               color: var(--Third-Color);
+               margin: 0px;
+            }
+            
+
+
+            /* ----- Sélection bagage end ----- */
+
+            /* style Number Bagage start */
+
+            .compteur-bagage{
+                display: flex;
+                flex-direction: row;
+                font-size: 20px;
+                
+                justify-content: space-around;
+                align-items: center;
+                margin: 0px  auto;
+            }
+
+            #compteurNbrValise{
+                all: unset;
+                width: 15px;
+                
+            }
+
+            #sub , #add{
+                margin: auto;
+                display: block;
+                align-items: center;
+            }
+
+            #sub:hover , #add:hover{
+                color: var(--Third-Color);
+                margin: auto;
+                display: block;
+                align-items: center;
+                cursor:pointer;
+                transition: 300ms ease-in-out;
+            }
+
+            #compteurNbrValise{
+                font-family: 'Montserrat', sans-serif;
+                color: var(--Third-Color);
+                background-color: transparent;
+                margin: auto;
+                
+            }
+
+            #compteurNbrValise input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            }
+
+            /* ----- osafar pass start ----- */
+
+            #osafar-pass{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                background-color: white;
+                
+            }
+
+            #osafar-pass-top-container{
+                display: flex;
+                border: 2px solid var(--Main-Color);    
+            }
+
+            .container-osafar-pass{
+                flex: 1;
+                
+                
+            }
+
+            #osafar-left-pass-container{
+                padding: 15px;
+                border-right-style: solid;
+                border-right-width: 1px;
+            }
+
+            #background-image-osafar-pass{
+                background-image: url(../public/imgs/reservationFly/pexels-mikhail-nilov-7820321.jpg);
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+            }
+
+            .osafar-left-block-pass-container{
+                display: flex;
+                align-items: center;
+            }
+
+            #osafar-pass-bottom-container{
+                display: flex;
+                flex-direction: column;
+                
+                padding-left: 30px;
+                
+            }
+            
+            #osafar-pass-top-block{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 20%;
+            }
+
+            /* osafar pass end */
+
+            /* Assurance start */
+
+            #container-assurance{
+                background-color: white;
+                border: 1px solid var(--Main-Color);
+                margin: 50px auto ;
+                width: 80%;
+            }
+
+            #container-top-assurance{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 50px;
+            }
+
+            #background-image-assurance{
+                background-image: url(../public/imgs/reservationFly/bg-insurance.jpg);
+                background-position: -68px -148px;
+                background-size: 400px;
+                display: flex;
+                width: 300px;
+                height: 300px;
+                border-radius: 100%;
+            }
+
+            .container-assurance-choice{
+                display: flex;
+                justify-content: space-around;
+                background-color: white;
+                width: 85%;
+                margin: 50px auto;
+                
+            }
+
+            .block-assurance-title{
+                color: var(--Third-Color);
+                font-weight: bold;
+                font-size: 25px;
+                margin: 50px;
+            }
+            
+            .card-assurance{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            
+            /* Assurance end */
+
+
+            /*  Summary order start */
+
+
+
+            #container-info-passenger{
+                background-color: white;
+                border: 1px solid var(--Main-Color);
+                width: 60%;
+                margin: auto;
+            }
+
+            #container-info-passenger-top{
+                display: flex;
+                gap: 50px;
+                align-items: flex-start;
+                justify-items: flex-end;
+                margin: 50px 30px;
+                
+            }
+
+            .block-info-passenger-top{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin: 20px;
+                gap: 10px;
+            }
+
+            /*  Summary order end */
+
+            /* Premium assurance start */
+
+            .container-premium{
+                margin: 50px auto ;
+                display: flex;
+                padding:  30px 0px;
+                background-color: white;
+                width: 60%;
+                border: 1px solid var(--Main-Color);
+            }
+
+            .block-premium{
+                padding: 0px 20px;
+                display: flex;
+                align-items: center;
+                height: 3vh;
+                gap: 20px;
+                margin: 10px;
+            }
+
+            /* Premium assurance end */
+
+/*-------- Style Search Bar --------*/
+
+@media only screen and (max-width: 600px){
+
+.Banner{
+   height: 100px;
+   width: 100%;
+}
+
+.tagline-banner{
+    top: -25%;
+}
+
+.tagline{
+    font-size: 10px;
+}
+
+.block-search{
+    width: 100%;
+    height: 1000px;
+}
+.search-container-input{
+    height: 900px;
+}
+.input-line-top,.input-line-bottom{
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    margin: 20px;
+}
+}
+
+@media only screen and (max-width: 1280px){
+.block-search{
+    width: 80%;
+}
+}

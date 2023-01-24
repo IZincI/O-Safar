@@ -51,13 +51,13 @@
 
     <link rel="stylesheet" href="./public/css/styleGeoffrey.css">
     <link rel="stylesheet" href="../public/css/style-user.css">
-    <link rel="stylesheet" href="../public/css/style-user.css">
+
 
     <!--  Script iconify -->
 
-    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 
-    <script src="../public/js/nav.js"></script>
+    <script src="<?php base_url('nav.js') ?>"></script>
 
 
 

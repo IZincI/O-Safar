@@ -20,7 +20,7 @@ function base_url($slug)
 function redirect($message, $page)
 {
 
-    /*$redirectTo = SITE_URL . $page;*/
+    $redirectTo = SITE_URL . $page;
     $_SESSION['message'] = "$message";
     header("Location: $page");
     exit(0);
@@ -30,3 +30,18 @@ function validateInput($dbcon, $input)
 {
     return mysqli_real_escape_string($dbcon, $input);
 }
+
+function alertMessage()
+{
+?>
+
+    <script>
+        alert("Vous devez vous identifiez!");
+        window.location.href = "<?php base_url('login.php'); ?>";
+    </script>';
+
+<?php
+    exit(0);
+}
+
+?>

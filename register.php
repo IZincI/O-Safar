@@ -18,6 +18,9 @@ include('includes/header.php');
 
 <link rel="stylesheet" href="./public/css/style-user.css">
 
+
+<link rel="stylesheet" href="<?php base_url('public/css/style-general.css') ?>">
+
 <body>
 
     <div id="icon-login">
@@ -69,7 +72,7 @@ include('includes/header.php');
                         </div>
                         <div class="right-side-form-contact">
                             <div class="mb-3">
-                                <button type="submit" name="update_btn" class="button-rounded">Créer le compte</button>
+                                <button type="submit" name="register_btn" class="button-rounded">Créer le compte</button>
                             </div>
                         </div>
                     </div>

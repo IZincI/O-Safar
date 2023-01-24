@@ -12,7 +12,7 @@ class RegisterController
 
     public function registration($fname, $lname, $email, $password)
     {
-        $register_query = "INSERT INTO user (fname, lname, email, password) VALUES ('$fname',' $lname', '$email', '$password')";
+        $register_query = "INSERT INTO user (fname, lname, email, password) VALUES ('$fname','$lname','$email','$password')";
         $result = $this->conn->query($register_query);
         return $result;
     }

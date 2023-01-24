@@ -1,11 +1,14 @@
 <?php
 include('config/app.php');
 include('codes/authentication_code.php');
+include('./admin/controllers/HotelController.php');
+
 include('includes/header.php');
+include('./includes/search.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +23,7 @@ include('includes/header.php');
 
 <!-- Global CSS -->
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="./public/css/style-general.css">
 
 <body>
 
@@ -32,7 +35,7 @@ include('includes/header.php');
 
     <div class="Banner">
         <div class="tagline-banner">
-            <h4 class="tagline">S'endormir & Voyager</h4>
+
         </div>
     </div>
 
@@ -43,56 +46,157 @@ include('includes/header.php');
         </p>
     </div>
 
+    <?php
+    $infosSearch = new SearchCode;
+    $getSearchinfo = $infosSearch->SelectedHotelSearch();
+
+    if (isset($getSearchinfo)) {
+
+
+        foreach ($getSearchinfo as $value) {
+        }
+    }
+    ?>
     <!--  start Recherche -->
 
     <h2>Reservation Hotel</h2>
 
-    <div class="block-search" id="search">
+    <div class="container-search" id="search">
         <?php include('message.php'); ?>
 
-        <div class="search-container-input">
-            <div class="input-line-top">
+        <form action="" method="get">
+            <div class="search-container-input">
+                <div class="input-line-top">
 
-                <div class="box">
+                    <div class="block-search">
 
-                    <input type="text" placeholder="Départ">
+                        <input class="input-login" type="text" name="namehostel" placeholder="Nom Hotel" value="<?php if (isset($_GET['namehostel'])) {
+                                                                                                                    echo $_GET['namehostel'];
+                                                                                                                } elseif (isset($_GET['SelectedHotel'])) {
+                                                                                                                    echo $value['namehostel'];
+                                                                                                                } else {
+                                                                                                                    echo "";
+                                                                                                                }
+                                                                                                                ?>">
+                    </div>
+                    <div class="block-search">
+
+                        <input type="text" placeholder="Ville" name="city">
+                    </div>
+                    <div class="block-search">
+
+                        <input type="date" placeholder="Check-in-Date" id="color-date">
+                    </div>
                 </div>
-                <div class="box">
+                <div class="input-line-bottom">
+                    <div class="block-search">
 
-                    <input type="text" placeholder="Arrivée">
+                        <input type="date" placeholder="Check-out-Date" value="" id="color-date">
+                    </div>
+                    <div class="block-search">
+
+                        <input type="number" placeholder="Adultes">
+                    </div>
+                    <div class="block-search">
+
+                        <input type="number" placeholder="Enfants">
+                    </div>
                 </div>
-                <div class="box">
-
-                    <input type="date" placeholder="Check-in-Date" id="color-date">
+                <div class="search">
+                    <input type="submit" name="search_btn" class="button-rounded" value="Chercher un Hotel"></input>
                 </div>
-            </div>
-            <div class="input-line-bottom">
-                <div class="box">
-
-                    <input type="date" placeholder="Check-out-Date" value="" id="color-date">
-                </div>
-                <div class="box">
-
-                    <input type="number" placeholder="Adultes">
-                </div>
-                <div class="box">
-
-                    <input type="number" placeholder="Enfants">
-                </div>
-            </div>
-            <div class="search">
-                <input type="submit" value="Chercher un Hotel">
-            </div>
-        </div>
-
-
+        </form>
+    </div>
     </div>
 
-    <!--  end Recherche -->
-
     <?php
-    include("./includes/footer.php");
+    // Show All Flies start
+
+    $parameterSearch = new SearchCode;
+    $resultSearchQuery = $parameterSearch->detailHotelSearch();
+
+    if ($resultSearchQuery !== NULL) {
+
+
+
+        foreach ($resultSearchQuery as $row) {
+
+
     ?>
+
+            <div>
+                <div class="block-info">
+
+                    <!--
+                    <div class="container-block-fly-info title-fly-info">
+                        <p><?= date('d-m-Y', strtotime($row['aller'])) ?></p>
+                    </div>
+        -->
+                    <div class="container-block-fly-info">
+
+
+                        <div class="block-fly-info">
+                            <p class="fly-info-title">Heure Départ</p>
+                        </div>
+                        <div class="block-fly-info">
+                            <p class="fly-info-title">Hotel</p>
+                        </div>
+                        <div class="block-fly-info">
+                            <p class="fly-info-title">Ville</p>
+                        </div>
+                        <div class="block-fly-info">
+                            <p class="fly-info-title">Prix</p>
+                        </div>
+                        <div class="block-fly-info">
+                            <p class="fly-info-title">Place Restantes</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="container-block-fly-info">
+
+
+                        <div class="block-fly-info">
+                            <p class="text-fly-info"><?= $row['namehostel'] ?></p>
+                        </div>
+                        <!--
+                        <div class="block-fly-info">
+                            <p class="text-fly-info"><?= date('H:m', strtotime($row['aller'])) ?></p>
+                        </div>
+                        <div class="block-fly-info">
+                            <p class="text-fly-info"><?= date('H:m', strtotime($row['retour'])) ?></p>
+                        </div>
+        -->
+                        <div class="block-fly-info">
+                            <p class="text-fly-info"><?= $row['city'] ?></p>
+                        </div>
+                        <div class="block-fly-info">
+                            <p class="text-fly-info"><?= $row['prix'] . " €" ?></p>
+                        </div>
+
+
+                    </div>
+                    <form action="./reserveFly/SelectionHotel.php" class="SubmitButton" method="get">
+                        <input type="hidden" value="<?= $row['id_hotel']; ?>" name="SelectedHotel">
+                        <!--<input type="hidden" value="<?= $totalPassenger ?>" name="total">-->
+                        <input type="submit" class="button-rounded" name="search_btn" value="Réserver"></input>
+                    </form>
+                </div>
+
+
+        <?php
+        }
+    }
+        ?>
+
+            </div>
+
+            <!--  end Recherche -->
+
+            <?php
+            include("./includes/footer.php");
+            ?>
 
 </body>
 

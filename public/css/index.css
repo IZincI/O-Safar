@@ -29,6 +29,64 @@ body{
     background-color: var(--Background-Color);
 }
 
+.block-explore-your-desirese{
+    position: absolute; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--Text-Color);
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: auto;
+
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 1;
+}
+
+.container-explore-your-desires{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#precedente,
+#suivante {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    position: absolute;
+    font-size: 50px;
+    margin: 10px;
+    color: var(--Main-Color);
+    
+    padding: 10px;
+}
+
+#precedente {
+    left: 0;
+}
+
+#suivante {
+    right: 0;
+}
+
+#slider {
+    position: relative;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    overflow: hidden;
+}
+
+
+
 @media only screen and (max-width: 600px){
 
     body{

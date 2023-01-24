@@ -33,18 +33,6 @@ class UserController
         }
     }
 
-
-    /*
-    changer la date en format UE
-
-
-
-    $volQuery = "SELECT * FROM  vol WHERE id_client='$vol_id' LIMIT 1;
-        SELECT DATE_FORMAT(aller, '%m-%d-%Y %H:%i')
-        FROM vol  WHERE id_vol='30';";
-    */
-
-
     public function edit($id)
     {
         $vol_id = validateInput($this->conn, $id);

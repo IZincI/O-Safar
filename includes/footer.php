@@ -22,7 +22,7 @@
 
     <link href="public/css/navGeoffrey.css" rel="stylesheet" type="text/css">
 
-    <script src="../public/js/master.js" defer></script>
+    <script src="public/js/master.js" defer></script>
 
     <link href="public/css/footer.css" rel="stylesheet" type="text/css">
 
@@ -48,7 +48,7 @@
                     <h3 class="titre-footer middle-footer">Nos Services :</h3>
                     <div class="links-footer">
                         <div>
-                            <a href="./reserveFly.php">
+                            <a href="<?php base_url('reserveFly.php') ?>">
                                 <p class="text-center-justify">Reservations de vols</p>
                             </a>
                         </div>

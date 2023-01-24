@@ -18,7 +18,7 @@ include('includes/header.php');
 
 <link rel="stylesheet" href="./public/css/style-user.css">
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="./public/css/style-general.css">
 
 <body>
 

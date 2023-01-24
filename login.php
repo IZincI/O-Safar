@@ -1,7 +1,7 @@
 <?php
 include('config/app.php');
 include('codes/authentication_code.php');
-$auth->isLoggedIn();
+
 
 include('includes/header.php');
 
@@ -18,7 +18,7 @@ include('includes/header.php');
 
 <link rel="stylesheet" href="./public/css/style-user.css">
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="./public/css/style-general.css">
 
 <body>
 
@@ -38,7 +38,8 @@ include('includes/header.php');
 
         <!-- Right Side Container -->
         <div class="right-login-container">
-            <?php include('message.php'); ?>
+
+
 
             <div>
                 <h1>Se Connecter</h1>
@@ -57,6 +58,10 @@ include('includes/header.php');
                 </div>
             </form>
 
+            <?php // include('message.php'); 
+            ?>
+
+
 
             <div class="line-create-account">
                 <p class="text-login">Vous n’avez pas encore créer de compte ?</p>
@@ -67,7 +72,7 @@ include('includes/header.php');
 
 
         <!-- <div class="col-md-6">
-            <?php include('message.php'); ?>
+            
             <div class="card">
                 <div class="card-header">
                     <h4>Se connecter</h4>

@@ -1,6 +1,7 @@
 <?php
 include('../../config/app.php');
 include_once('../controllers/VolController.php');
+include_once('../controllers/HotelController.php');
 
 
 
@@ -28,6 +29,7 @@ if (isset($_POST['update_vol'])) {
     ];
     $vol = new VolController;
     $result = $vol->update($inputData, $id);
+    var_dump($vol);
     if ($result) {
         redirect("Le vol a été modifier avec succés", "../vol-view.php");
     } else {
@@ -52,5 +54,45 @@ if (isset($_POST['save_vol'])) {
         redirect("Le vol a été ajouter avec succés", "../vol-view.php");
     } else {
         redirect("Erreur", "../vol-add.php");
+    }
+}
+
+
+
+
+/*
+if (isset($_POST['save_hotel'])) {
+    $inputData = [
+        'namehostel' => validateInput($db->conn, $_POST['namehostel']),
+        'city' => validateInput($db->conn, $_POST['city']),
+        'postalcode' => validateInput($db->conn, $_POST['postalcode']),
+        'images' => validateInput($db->conn, $_POST['images[]']),
+    ];
+
+    $hotel = new HotelController;
+    $result = $hotel->create($inputData);
+
+    if ($result) {
+        redirect("L'hotel a bien été ajouter avec succés", "../Hotel-add.php");
+    } else {
+        redirect("Erreur", "../Hotel-add.php");
+    }
+}
+*/
+if (isset($_POST['save_hotel'])) {
+    $inputData = [
+        'namehostel' => validateInput($db->conn, $_POST['namehostel']),
+        'city' => validateInput($db->conn, $_POST['city']),
+        'postalcode' => validateInput($db->conn, $_POST['postalcode']),
+        'imagehostel' => validateInput($db->conn, $_POST['images']),
+    ];
+
+    $hotel = new HotelController;
+    $result = $hotel->create($inputData);
+
+    if ($result) {
+        redirect("L'hotel a bien été ajouter avec succés", "../Hotel-view.php");
+    } else {
+        redirect("Erreur", "../Hotel-add.php");
     }
 }

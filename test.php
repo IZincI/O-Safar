@@ -1,16 +1,16 @@
 <?php
 include('./config/app.php');
-include_once('./admin/controllers/UserController.php');
+// include_once('./admin/controllers/UserController.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <!--  Fonts  -->
@@ -38,7 +38,7 @@ include_once('./admin/controllers/UserController.php');
 
 <!-- Global CSS -->
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="./public/css/style-general.css">
 
 <!--  Script iconify -->
 
@@ -46,187 +46,158 @@ include_once('./admin/controllers/UserController.php');
 
 
 <body>
-    <div class="white-text text-center-justify">
-        <a href="./">
-            <h1>PHP</h1>
-        </a>
-    </div>
 
 
+  <!--
+    Il existe plusieurs manières de connecter une base de données à un dossier d'images afin de récupérer plusieurs images. Voici quelques étapes générales à suivre :
 
+Assurez-vous d'avoir accès à une base de données contenant les informations sur les images que vous souhaitez récupérer, ainsi qu'à un dossier d'images sur votre ordinateur.
 
+Créez une connexion à la base de données à l'aide d'un langage de programmation, tel que PHP ou Python.
 
+Récupérez les informations sur les images à partir de la base de données en utilisant une requête SQL.
 
+Utilisez les informations récupérées pour générer des liens vers les images dans le dossier.
 
+Affichez les images sur votre site web ou dans votre application en utilisant les liens générés.
 
-    <!--
+Il est recommandé de se familiariser avec les bases de la programmation et de la gestion de bases de données avant de tenter de mettre en place cette solution.
 
-    <?php /*
-include('../config/app.php');
-include_once('../controllers/AuthenticationController.php');
+-->
 
-$authenticated = new AuthenticationController;
-$authenticated->admin();
+  <?php
 
-include_once('../admin/controllers/UserController.php');
-include('../includes/header.php');
-?>
 
-<!DOCTYPE html>
-<html lang="en">
+  class Folder
+  {
+    protected $filePath = "./images/";
+    protected $nameHostel = "teste";
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<!-- Files CSS -->
-
-<link rel="stylesheet" href="../public/css/my-profile.css">
-
-<!-- Global CSS -->
-
-<link rel="stylesheet" href="../public/css/styleGeoffrey.css">
-
-<body>
-
-    <?php
-    include('../includes/navbar.php'); ?>
-    <div class="container-fluid px-4">
-
-        <div class="row mt-4">
-            <div class="col-md-12">
-
-                <?php include('../message.php') ?>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Modifier un vol</h4>
-                    </div>
-                    <div class="card-body">
-
-                        <?php
-                        if (isset($_GET['update_user'])) {
-                            $id = validateInput($db->conn, $data['id_client']);
-                            $user = new UserController;
-                            $result = $user->edit($id);
-                            if ($result) {
-                        ?>
-                                <form class="list-unstyled" action="./user/user-code.php" method="post">
-
-                                    <input type="text" name="fname" placeholder="Prénom:" value="<?= $data['fname'] ?>">
-
-                                    <input type="text" name="lname" placeholder="Nom:" value="<?= $data['lname']; ?>">
-
-                                    <input type="email" name="email" placeholder="Email:" value="<?= $data['email']; ?>">
-
-                                    <input type="password" name="password" placeholder="Mot de passe:" value="<?= $data['email']; ?>">
-
-                                    <li><span>Créer le:</span> <?= date('d-m-Y', strtotime($data['create_at'])); ?></li>
-
-                                    <button type="submit" name="update_user" class="button-square">Modifier</button>
-                                </form>
-                        <?php
-                            } else {
-                                echo "<h4>Erreur</h4>";
-                            }
-                        } else {
-                            echo "<h4>Erreur</h4>";
-                        }
-                        ?>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    </div>
-    <?php
-    include('../includes/footer.php');
-
-
-    */ ?>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <div>
-
-
-    <?php
-    /*
-// affichage des Vols
-$infoUser = new UserController;
-$result = $infoUser->index();
-if ($result) {
-    foreach ($result as $row) {
-        var_dump($row);
-?>
-
-        <div class="container-block">
-
-            <div class="box-test"><?= $row['id_client'] ?></div>
-            <div class="box-test"><?= $row['fname'] ?></div>
-            <div class="box-test"><?= $row['lname'] ?></div>
-            <div class="box-test"><?= $row['email'] ?></div>
-            <div class="box-test"><?= $row['password'] ?></div>
-            <div class="box-test"><?= $row['create_at'] ?></div>
-
-        </div>
-
-
-<?php
+    public function createFolder($nameHostel)
+    {
+      if (!is_dir($this->filePath . $nameHostel)) {
+        mkdir($this->filePath . $nameHostel);
+        return "Le dossier a été créé.</br>";
+      } else {
+        return "Le dossier existe déjà.</br>";
+      }
     }
-}
+
+    public function insertImage($folder_id)
+    {
+      // $folder = $this->filePath . $this->name;
+
+      $images =   $_FILES['image'];
+      var_dump($_FILES['image']);
+      $imagesTmp = $_FILES['image']['tmp_name'];
+      //var_dump($imagesTmp);
+      $imagesName = $_FILES['image']['name'];
+      var_dump($imagesName);
+
+      var_dump(sizeof($imagesName));
+
+      $folder = $this->filePath . $folder_id;
+      echo "le folder_id est " . $folder_id;
+      echo "</br>";
+
+      /*
+      foreach ($imagesName as $valueName) {
+        //for ($i = 0; $i < sizeof($imagesName); $i++) {
+
+        $target_file = "./images/" . $folder_id . "/" . basename($valueName);
+        echo " les différentes values sont . $target_file <br>";
+      }
+      foreach ($imagesTmp as $valueTmp) {
+
+        $target_file = "./images/" . $folder_id . "/" . basename($valueTmp);
+        echo " les différentes values sont . $valueTmp <br>";
+        move_uploaded_file($valueTmp, $target_file);
+      }
 */
+      // $value = basename($_FILES["image"]["name"][$key]);
 
-    ?>
-
-
-
-
+      var_dump(sizeof($imagesTmp));
+    }
 
 
+    /*
+        public function insertImage($folder_id)
+    {
+      // $folder = $this->filePath . $this->name;
+      $images = ($_FILES['image']);
+      //var_dump($_FILES['image']['tmp_name']);
+      $imagesTmp = $_FILES['image']['tmp_name'];
+      //var_dump($imagesTmp);
+      $imagesName = $images['name'];
 
 
-    </div>
 
+
+      $folder = $this->filePath . $folder_id;
+      echo "le folder_id est " . $folder_id;
+      echo "</br>";
+      // foreach ($_FILES["image"]["error"] as $key => $error)
+      // if ($error == UPLOAD_ERR_OK)
+      //$imagesTmp = $_FILES["image"]["tmp_name"][$key];
+      // basename() may prevent filesystem traversal attacks;
+      // further validation/sanitation of the filename may be appropriate
+
+      foreach ($imagesTmp as $valueTmp) {
+        echo " les différentes values sont . $valueTmp <br>";
+      }
+      foreach ($imagesName as $valueName) {
+        echo " les différentes values sont . $valueName <br>";
+      }
+
+      $target_file = "./images/" . basename($valueName);
+      // $value = basename($_FILES["image"]["name"][$key]);
+
+      if (is_dir("./images/test")) {
+        var_dump(is_dir($folder));
+        echo 'le dossier existe </br>';
+        var_dump(move_uploaded_file($valueTmp, $target_file));
+        if (move_uploaded_file($valueTmp, $target_file) == true) {
+        } else {
+          return "Erreur lors de l'insertion de l'image. </br>";
+        }
+      }
+    }
+    */
+  }
+
+
+
+
+  if (isset($_POST['image_btn'])) {
+    $nameFolder = $_POST['nameHostel'];
+    $NewFolder = new Folder($nameFolder);
+    echo $NewFolder->createFolder($nameFolder);
+    echo $NewFolder->insertImage($nameFolder);
+    echo "bonjhour";
+  }
+
+
+  if (isset($_POST['image_btn'])) {
+
+
+
+
+  ?>
+
+
+  <?php
+
+  }
+  ?>
+
+  <form action="./test.php" method="post" enctype="multipart/form-data">
+    <input type="text" name="nameHostel">
+    <input type="file" name="image[]" id="" multiple>
+    <input type="submit" name="image_btn" value="envoyer">
+    <img src="./images" alt="">
+  </form>
+
+  <img src="./images/Capture.JPG" alt="">
 
 </body>
 

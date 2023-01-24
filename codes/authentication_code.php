@@ -1,13 +1,13 @@
 <?php
-include_once('controllers/RegisterController.php');
-include_once('controllers/LoginController.php');
+include_once('Controllers/RegisterController.php');
+include_once('Controllers/LoginController.php');
 
 $auth = new LoginController;
 
 if (isset($_POST['logout_btn'])) {
     $checkedLoggedOut = $auth->logout();
     if ($checkedLoggedOut) {
-        redirect("Vous  êtes déconnectés", "login.php");
+        redirect("Vous  êtes déconnectés", "index.php");
     }
 }
 
@@ -19,7 +19,7 @@ if (isset($_POST['login_btn'])) {
     $checkLogin = $auth->userLogin($email, $password);
     if ($checkLogin) {
         if ($_SESSION['auth_role'] == '1') {
-            redirect("Vous êtes connectés", "./index.php");
+            redirect("", "./");
         } else {
             redirect("Vous êtes connectés", "index.php");
         }
@@ -27,8 +27,6 @@ if (isset($_POST['login_btn'])) {
         redirect("L'adresse mail ou le mot de passe n'est pas valide", "login.php");
     }
 }
-
-
 
 
 if (isset($_POST['register_btn'])) {

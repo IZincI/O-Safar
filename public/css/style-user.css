@@ -3,7 +3,7 @@
 body{
     margin:0px;
     padding:0px;
-    background-color: var( --Background-Color2); 
+    background-color: var( --Background-Color1); 
 }
 
 /* ----- general settings start ----- */
@@ -19,7 +19,7 @@ body{
 #icon-login{
     position: relative;
     padding: 1% 2%;
-    color: #FFFFFF;
+    color: var(--Text-Color);
 }
 
 #picture-login{
@@ -32,7 +32,7 @@ body{
 .right-login-container{
     background-color: var(--Background-Color1);
     width: 50%;
-    padding: 37px 50px;
+    padding: 50px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -41,33 +41,37 @@ body{
 .form-login{
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 300px;
     
     justify-content: space-around;
 }
 .input-login:focus
 {
     color: var(--Text-Color2);
-    
+    background-color: transparent;
 }
 
 .input-login:valid,
 input[type='email']
 {
     color: var(--Text-Color2);
+    background-color: transparent;
 }
 
 .input-login:valid:hover,
 input[type='email']:hover{
-    color: #000000a2;
+    color: #11AD98;
+    background-color: transparent;
 }
 
 .input-login::placeholder{
-    color: rgb(167, 167, 167);
+    color: rgb(0, 0, 0);
+    background-color: transparent;
 }
 
 .input-login:hover::placeholder{
-    color: var(--Text-Color2);
+    color: var(--Main-Color);
+    background-color: transparent;
 }
 
 .text-login{

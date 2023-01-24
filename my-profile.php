@@ -1,6 +1,6 @@
 <?php
 include('config/app.php');
-include_once('controllers/AuthenticationController.php');
+include_once('Controllers/AuthenticationController.php');
 
 include("./admin/codes/user-code.php");
 
@@ -32,7 +32,7 @@ include('includes/navbar.php');
 
 <!-- Global CSS -->
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="public/css/style-general.css">
 
 <script src="public/js/master.js" defer></script>
 
@@ -68,9 +68,11 @@ include('includes/navbar.php');
                             <li class="slider" onmouseover="changementauclick()" id="voyage">
                                 <p class="text-info"> Documents de voyage</p>
                             </li>
+                            <!--
                             <li class="slider" onmouseover="changementauclick()">
                                 <p class="text-info"> Compagnons de voyage</p>
                             </li>
+-->
                         </ul>
 
                     </div>

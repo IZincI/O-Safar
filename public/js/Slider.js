@@ -4,7 +4,7 @@ let pictureSlider = document.getElementsByClassName("slider");
 let pictureNumber = pictureSlider.length;
 let Previous = document.getElementById("slideLeft");
 let Next = document.getElementById("slideRight");
-let test = '<img id"featured " src="public/imgs/offre/suite.jpeg">';
+
 
 
 function changementFeatured(){
@@ -35,14 +35,13 @@ Next.addEventListener('click',function() {
     stape++;
     if(stape >= pictureNumber){
         stape = 0 ;
+    }else{
+        deleteActivePicture();
+        pictureSlider[stape].classList.add("active");
+        changementFeatured();
     }
-    deleteActivePicture();
-    pictureSlider[stape].classList.add("active");
-    
-    changementFeatured();
-    
-}
-)
+    }
+    )
 
 Previous.addEventListener("click",function() {
     stape--;
@@ -54,7 +53,7 @@ Previous.addEventListener("click",function() {
     pictureSlider[stape].classList.add("active");
     changementFeatured();
     
-})
+    })
 
 
     for(let i = 0 ; i < pictureSlider.length ; i++)
@@ -76,7 +75,7 @@ Previous.addEventListener("click",function() {
 
  
 
-/* function au click propre */
+    /* function au click propre */
 
 
 function changementauclick(){
@@ -87,8 +86,7 @@ function changementauclick(){
         if(active ?? true){
                      console.log("bonjour");
         }else{
-            news = pictureSlider[i];
-            console.log(news);
+            
             for(let i = 0 ; i < pictureSlider.length ; i++){
                 pictureSlider[i].classList.remove("active");
             }
@@ -98,6 +96,7 @@ function changementauclick(){
     })
     }
 
+    
 
 
 

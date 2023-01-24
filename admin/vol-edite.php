@@ -53,7 +53,7 @@ include('includes/header.php');
                                 </div>
                                 <div class="mb-3">
                                     <label for="">Prix</label>
-                                    <input type="text" name="prix" value="<?= $result['prix'] . " €" ?>" required class="form-control">
+                                    <input type="number" name="prix" value="<?= $result['prix']  ?>" required class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <button type="submit" name="update_vol" class="btn btn-primary">Modifier le vol</button>

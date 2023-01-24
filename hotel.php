@@ -27,7 +27,7 @@ include('includes/header.php');
 
 <!-- Global CSS -->
 
-<link rel="stylesheet" href="./public/css/styleGeoffrey.css">
+<link rel="stylesheet" href="./public/css/style-general.css">
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 
@@ -42,15 +42,13 @@ include('includes/header.php');
     <div class="gap-header"></div>
 
     <!-- /* navbar end */ -->
-
     <div class="container-hotel">
 
         <div class="block-left">
 
             <div id="bloc-featured">
-                <img id="featured" src="public/imgs/offre/suite.jpeg">
+                <img id="featured" src="images/<?= $_GET['namehostel'] ?>/image1.webp">
             </div>
-
 
 
             <div id="slide-wrapper">
@@ -61,11 +59,11 @@ include('includes/header.php');
 
                 <div id="slider-container">
 
-                    <img class="slider active" onmouseover="changementauclick()" src="public/imgs/offre/suite.jpeg">
-                    <img class="slider " onmouseover="changementauclick()" src="public/imgs/offre/chdouble.jpeg">
-                    <img class="slider " onmouseover="changementauclick()" src="public/imgs/offre/chambre.jpeg">
-                    <img class="slider" onmouseover="changementauclick()" src="public/imgs/offre/salledebain.jpeg">
-                    <img class="slider " onmouseover="changementauclick()" src="public/imgs/offre/maroco.jpeg">
+                    <img class="slider active" onmouseover="changementauclick()" src="images/<?= $_GET['namehostel'] ?>/image1.webp">
+                    <img class="slider " onmouseover="changementauclick()" src="images/<?= $_GET['namehostel'] ?>/image2.webp">
+                    <img class="slider " onmouseover="changementauclick()" src="images/<?= $_GET['namehostel'] ?>/image3.webp">
+                    <img class="slider" onmouseover="changementauclick()" src="images/<?= $_GET['namehostel'] ?>/image4.webp">
+                    <img class="slider " onmouseover="changementauclick()" src="images/<?= $_GET['namehostel'] ?>/image5.webp">
                 </div>
 
                 <iconify-icon id="slideRight" class="arrow" icon="material-symbols:arrow-circle-right" width="25"></iconify-icon>
@@ -74,22 +72,58 @@ include('includes/header.php');
 
 
         </div>
+        <!--
+
+        <div class="container-hotel">
+
+            <div class="block-left">
+
+                <div id="bloc-featured">
+                    <img id="featured" src="public/imgs/offre/suite.jpeg">
+                </div>
+
+                <?= $_GET['namehostel'] ?>
+
+                <div id="slide-wrapper">
+
+                    <div>
+                        <iconify-icon id="slideLeft" class="arrow" icon="material-symbols:arrow-circle-left-rounded" width="25"></iconify-icon>
+                    </div>
+
+                    <div id="slider-container">
+
+                        <img class="slider active" onmouseover="changementauclick()" src="public/imgs/offre/suite.jpeg">
+                        <img class="slider " onmouseover="changementauclick()" src="public/imgs/offre/chdouble.jpeg">
+                        <img class="slider " onmouseover="changementauclick()" src="public/imgs/offre/chambre.jpeg">
+                        <img class="slider" onmouseover="changementauclick()" src="public/imgs/offre/salledebain.jpeg">
+                        <img class="slider " onmouseover="changementauclick()" src="public/imgs/offre/maroco.jpeg">
+                    </div>
+
+                    <iconify-icon id="slideRight" class="arrow" icon="material-symbols:arrow-circle-right" width="25"></iconify-icon>
+
+                </div>
+
+
+            </div>
+-->
 
         <div class="block-right">
 
             <div class="text-block">
-                <p>Nom Hotel</p>
+                <p><?= $_GET['namehostel'] ?></p>
             </div>
             <div class="text-block">
-                <p>A partir de </p>
+                <p>A partir de <?= $_GET['price'] ?> €</p>
             </div>
             <p class="text-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat tempor ipsum. Phasellus id cursus urna. Mauris id dignissim ligula. Morbi posuere rutrum lacus, varius euismod erat placerat vitae. Nunc sit amet nisl sed massa mollis consectetur. Nullam id dui.</p>
 
             <button class="button-outline">Réserver</button>
 
         </div>
+    </div>
 
     </div>
+
 
 
 

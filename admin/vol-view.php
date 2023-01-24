@@ -1,6 +1,6 @@
 <?php
 include('../config/app.php');
-include_once('../controllers/AuthenticationController.php');
+include_once('../Controllers/AuthenticationController.php');
 
 $authenticated = new AuthenticationController;
 $authenticated->admin();
