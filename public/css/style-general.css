@@ -307,6 +307,15 @@ p{
     filter :saturate(0);
 }
 
+.picture{
+    filter: grayscale(0%);
+    height: 250px;
+}
+
+.text-style{
+    background-color: var(--Main-Color);
+}
+
 .container-text-card{
     background: #797979;
     bottom: 0px;
@@ -335,27 +344,18 @@ stylecard-hover{
     background-color: #E8810C;
 }
 
-.picture{
-    filter: grayscale(0%);
-    height: 250px;
-}
 
-.picturenormal{
-    filter: grayscale(100%); 
-}
 
 .underline{
-    
     padding: 4px;
     display: inline-block;
-    
     text-decoration: underline  0.1px;
     text-underline-offset: 5px;
     
 }
 
-.text-style{
-    background-color: var(--Main-Color);
+.picturenormal{
+    filter: grayscale(100%); 
 }
 
 /* .firstrowhotel .second-row-hotel{

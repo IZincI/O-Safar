@@ -8,6 +8,8 @@ if (isset($_POST['logout_btn'])) {
     $checkedLoggedOut = $auth->logout();
     if ($checkedLoggedOut) {
         redirect("Vous  êtes déconnectés", "index.php");
+    } else {
+        redirect("", "../");
     }
 }
 
@@ -19,7 +21,7 @@ if (isset($_POST['login_btn'])) {
     $checkLogin = $auth->userLogin($email, $password);
     if ($checkLogin) {
         if ($_SESSION['auth_role'] == '1') {
-            redirect("", "./");
+            redirect("Vous êtes connectés", "./");
         } else {
             redirect("Vous êtes connectés", "index.php");
         }
@@ -37,13 +39,18 @@ if (isset($_POST['register_btn'])) {
     $confirm_password = validateInput($db->conn, $_POST['confirm_password']);
 
     $register = new RegisterController;
+
     $result_password = $register->confirmPassword($password, $confirm_password);
+
     if ($result_password) {
+
         $result_user = $register->isUserExists($email);
+
         if ($result_user) {
             redirect("Adresse mail éxiste déja", "register.php");
         } else {
             $register_query = $register->registration($fname, $lname, $email, $password);
+
             if ($register_query) {
                 redirect("Compte créer avec succée", "login.php");
             } else {

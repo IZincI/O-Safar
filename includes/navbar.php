@@ -72,9 +72,6 @@
 
 
 
-                <div>
-                    <li><a class="link-style" href="./test.php">test</a></li>
-                </div>
 
                 <div>
                     <li><a class="link-style" href="<?php base_url('index.php') ?>" class="active">Accueil</a></li>
@@ -112,10 +109,10 @@
                 </div>
 
                 <div id="button-logout">
-                    <form action="" method="POST">
+                    <form action="./index.php" method="POST">
                         <a class="selection-nav">
                             <div class="selection-nav">
-                                <button type="submit" name="logout_btn" class="button-square">Se déconnecter</button>
+                                <button type="submit" name="logout_btn" class="button-square" value="">Se déconnecter</button>
                             </div>
 
                     </form>

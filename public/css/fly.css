@@ -130,4 +130,9 @@
     .block-search{
         width: 80%;
     }
+
+    .Banner{
+        height: 250px;
+        width: 100%;
+     }
 }

@@ -81,7 +81,7 @@ if (sub.addEventListener("click",function () {
 
 let buttonAssuranceOption = document.getElementsByClassName("button-option-assurance");
 let assuranceCard = document.querySelectorAll(".card-assurance");
-let inputAssuranceCheck = document.getElementsByClassName("input-assurance-check");
+
 
 for(let a = 0 ; a < buttonAssuranceOption.length ; a++)
 

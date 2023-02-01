@@ -24,6 +24,7 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
     
+// block disconnect my-profile admin
 
 let profile = document.getElementById("profile");
 let buttonLogout = document.getElementById("button-logout");

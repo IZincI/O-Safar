@@ -59,6 +59,7 @@ if (isset($_POST['identitycard_btn'])) {
 
 if (isset($_POST['updateUser_btn'])) {
     $fname = validateInput($db->conn, $_POST['fname']);
+    $_SESSION['auth_user']['user_fname'] = validateInput($db->conn, $_POST['fname']);
     $lname = validateInput($db->conn, $_POST['lname']);
     $email = validateInput($db->conn, $_POST['email']);
     $password = validateInput($db->conn, $_POST['password']);

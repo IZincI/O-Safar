@@ -3,6 +3,8 @@ include('config/app.php');
 include('codes/authentication_code.php');
 include('includes/header.php');
 include('includes/chatbox.php');
+
+include_once('Controllers/AuthenticationController.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +75,6 @@ include('includes/chatbox.php');
 
     <div class="gap-header"></div>
     <div class="gap-header"></div>
-
 
 
     <?php
